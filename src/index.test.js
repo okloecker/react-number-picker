@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { LineWidthPicker } from '.'
 
-describe('ExampleComponent', () => {
+describe('LineWidthPicker', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(LineWidthPicker).toBeTruthy()
   })
 })
