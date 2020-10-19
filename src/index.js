@@ -47,7 +47,7 @@ function invertRgb(rgb) {
  * @param onChange fires when user hovers over a row (enters it)
  *
  */
-const NumberPicker = ({
+const NumberSelector = ({
   values,
   selectedValue,
   width,
@@ -148,10 +148,10 @@ const NumberPicker = ({
   )
 }
 
-NumberPicker.propTypes = {
+NumberSelector.propTypes = {
   values: PropTypes.array,
   onChange: PropTypes.func,
   onClick: PropTypes.func
 }
 
-export default NumberPicker
+export default NumberSelector

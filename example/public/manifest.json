@@ -1,6 +1,6 @@
 {
-  "short_name": "react-number-picker",
-  "name": "react-number-picker",
+  "short_name": "react-number-selector",
+  "name": "react-number-selector",
   "icons": [
     {
       "src": "favicon.ico",

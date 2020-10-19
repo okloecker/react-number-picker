@@ -1,31 +1,31 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import NumberPicker from '..'
+import NumberSelector from '..'
 
 export default {
-  title: 'NumberPicker',
-  component: NumberPicker
+  title: 'NumberSelector',
+  component: NumberSelector
 }
 
-export const NumberPickerDefault = () => (
-  <NumberPicker onChange={action('change')} onClick={action('click')} />
+export const NumberSelectorDefault = () => (
+  <NumberSelector onChange={action('change')} onClick={action('click')} />
 )
-export const NumberPickerWithCustomInputAndDisable = () => (
-  <NumberPicker
+export const NumberSelectorWithCustomInputAndDisable = () => (
+  <NumberSelector
     onChange={action('change')}
     onClick={action('click')}
     values={[-1, 1, 3, 7]}
     showCustomInput={true}
   />
 )
-export const NumberPickerWithDisable = () => (
-  <NumberPicker
+export const NumberSelectorWithDisable = () => (
+  <NumberSelector
     onChange={action('change')}
     onClick={action('click')}
     values={[-1, 1, 3, 7]}
   />
 )
-export const NumberPickerPink = () => (
+export const NumberSelectorPink = () => (
   <div
     style={{
       background: 'grey',
@@ -35,10 +35,10 @@ export const NumberPickerPink = () => (
     }}
   >
     <div />
-    <NumberPicker colour='hotpink' onClick={action('click')} />
+    <NumberSelector colour='hotpink' onClick={action('click')} />
   </div>
 )
-export const NumberPickerPinkWithCustomArray = () => (
+export const NumberSelectorPinkWithCustomArray = () => (
   <div
     style={{
       background: 'grey',
@@ -48,17 +48,17 @@ export const NumberPickerPinkWithCustomArray = () => (
     }}
   >
     <div />
-    <NumberPicker
+    <NumberSelector
       colour='hotpink'
       onClick={action('click')}
       values={[1, 3, 7]}
     />
   </div>
 )
-export const NumberPickerDarkBackground = () => (
-  <NumberPicker background={'#909090'} onClick={action('click')} />
+export const NumberSelectorDarkBackground = () => (
+  <NumberSelector background={'#909090'} onClick={action('click')} />
 )
-export const NumberPickerCustomWidthWhiteOnBlackWithAlpha = () => (
+export const NumberSelectorCustomWidthWhiteOnBlackWithAlpha = () => (
   <div
     style={{
       background: 'black',
@@ -68,11 +68,11 @@ export const NumberPickerCustomWidthWhiteOnBlackWithAlpha = () => (
     }}
   >
     <div />
-    <NumberPicker width={50} onClick={action('click')} />
+    <NumberSelector width={50} onClick={action('click')} />
   </div>
 )
 
-export const NumberPickerTransparent = () => (
+export const NumberSelectorTransparent = () => (
   <div
     style={{
       background: 'black',
@@ -82,11 +82,11 @@ export const NumberPickerTransparent = () => (
     }}
   >
     <div />
-    <NumberPicker background={'#00000090'} onClick={action('click')} />
+    <NumberSelector background={'#00000090'} onClick={action('click')} />
   </div>
 )
 
-export const NumberPickerBiggerFont = () => (
+export const NumberSelectorBiggerFont = () => (
   <div
     style={{
       display: 'flex',
@@ -95,11 +95,11 @@ export const NumberPickerBiggerFont = () => (
     }}
   >
     <div />
-    <NumberPicker fontSize={'40px'} onClick={action('click')} />
+    <NumberSelector fontSize={'40px'} onClick={action('click')} />
   </div>
 )
 
-export const NumberPickerSelectedWidth = () => (
+export const NumberSelectorSelectedWidth = () => (
   <div
     style={{
       display: 'flex',
@@ -108,7 +108,7 @@ export const NumberPickerSelectedWidth = () => (
     }}
   >
     <div />
-    <NumberPicker
+    <NumberSelector
       background={'#ffffff'}
       lineWidth={3}
       onClick={action('click')}

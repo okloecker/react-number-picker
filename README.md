@@ -1,28 +1,69 @@
-# react-number-picker
+# react-number-selector
 
-> Pick from a pre-set list of numbers or custom field.
-
-[![NPM](https://img.shields.io/npm/v/react-number-picker.svg)](https://www.npmjs.com/package/react-number-picker) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+> A number selector React component
 
 ## Install
 
 ```bash
-npm install --save react-number-picker
+npm install --save react-number-selector
 ```
+
+## Intro
+
+<p align="center">
+  <img width="146" src="media/demo.png">
+</p>
 
 ## Usage
 
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-number-picker'
-import 'react-number-picker/dist/index.css'
+import NumberSelector from 'react-number-selector'
+import 'react-number-selector/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <NumberSelector />
   }
 }
+```
+
+### NumberSelector accepts these props:
+ * values: array of widths to display (default: [1, 2, 3, 4, 5, 7, 9])
+ * selectedValue: the default selected element from values
+ * width: component width (default: 100)
+ * background: component's background colour (default: "#000000");
+ * colour: the texts' colour (default: "#00ff00")
+ * hoverBorder: an element's border when hovering over it (default: no border)
+ * hoverBackground: an element's background when hovering over it (default: undefined)
+ * font: the text's font-family (default: "sans-serif")
+ * fontSize: the text's font size (CSS value; default: initial)
+ * showCustomInput: if true, shows custom number input field
+ * opacity: the component's opacity (not the hovering opacity; CSS value, default: 1)
+ * onClick: a function that is called with a single argument, the value from values, when user clicks a hovered row
+ * onChange: a function that is called with the hovered over row when user hovers over a row (enters it)
+
+### Develop
+
+Watch and build bundle:
+```
+yarn start
+```
+
+In separate terminal run dev server:
+```
+cd example
+yarn start
+```
+
+Run storybook:
+```
+yarn storybook
+```
+or 
+```
+npm run storybook
 ```
 
 ## License
