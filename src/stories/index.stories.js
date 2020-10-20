@@ -16,10 +16,34 @@ export const NumberSelectorWithCustomInputAndDisable = () => (
     onClick={action('click')}
     values={[-1, 1, 3, 7]}
     minValue={1}
-    disabledText={"Ignore"}
+    disabledText={'Ignore'}
     onInputChange={action('input changed')}
   />
 )
+
+export const NumberSelectorWithCustomInputAndDisableBlack = () => (
+  <div
+    style={{
+      background: 'grey',
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '2ex'
+    }}
+  >
+    <div />
+    <NumberSelector
+      onChange={action('change')}
+      onClick={action('click')}
+      values={[-1, 1, 3, 7]}
+      minValue={1}
+      colour={'#ffffff'}
+      inputColour={'#000000'}
+      disabledText={'Ignore'}
+      onInputChange={action('input changed')}
+    />
+  </div>
+)
+
 export const NumberSelectorWithDisable = () => (
   <NumberSelector
     onChange={action('change')}

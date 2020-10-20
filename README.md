@@ -35,6 +35,7 @@ class Example extends Component {
  * width: component width (default: 100)
  * background: component's background colour (default: "#000000");
  * colour: the texts' colour (default: "#00ff00")
+ * inputColour: the input field's text colour (default: same as "colour")
  * hoverBorder: an element's border when hovering over it (default: no border)
  * hoverBackground: an element's background when hovering over it (default: undefined)
  * font: the text's font-family (default: "sans-serif")

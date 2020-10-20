@@ -40,6 +40,7 @@ function invertRgb(rgb) {
  * @param width component width
  * @param background component's background colour
  * @param colour the texts' colour
+ * @param inputColour the texts' colour
  * @param font the text's font-family
  * @param opacity the component's opacity (not the hovering opacity)
  * @param onInputChange function that is called with a custom input value; if not provided, no input field will be shown
@@ -55,6 +56,7 @@ const NumberSelector = ({
   width,
   background,
   colour,
+  inputColour,
   hoverBorder,
   hoverBackground,
   font,
@@ -134,9 +136,9 @@ const NumberSelector = ({
             style={{
               width: 'inherit',
               padding: '0.5ex',
-              color: finalColour,
-              fontFamily: 'inherit',
-              fontSize: 'inherit',
+              color: inputColour !== undefined ? inputColour : finalColour,
+              fontFamily: font || DEFAULT_FONT,
+              fontSize: 'initial',
               border: '1px solid #efefef',
               borderRadius: '3px'
             }}
