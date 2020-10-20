@@ -15,7 +15,9 @@ export const NumberSelectorWithCustomInputAndDisable = () => (
     onChange={action('change')}
     onClick={action('click')}
     values={[-1, 1, 3, 7]}
-    showCustomInput={true}
+    minValue={1}
+    disabledText={"Ignore"}
+    onInputChange={action('input changed')}
   />
 )
 export const NumberSelectorWithDisable = () => (

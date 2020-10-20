@@ -42,7 +42,7 @@ function invertRgb(rgb) {
  * @param colour the texts' colour
  * @param font the text's font-family
  * @param opacity the component's opacity (not the hovering opacity)
- * @param showCustomInput whether to show the number input field
+ * @param onInputChange function that is called with a custom input value; if not provided, no input field will be shown
  * @param onClick fires when user clicks a hovered row
  * @param onChange fires when user hovers over a row (enters it)
  *
@@ -50,6 +50,8 @@ function invertRgb(rgb) {
 const NumberSelector = ({
   values,
   selectedValue,
+  minValue = -Infinity,
+  disabledText = "Disabled",
   width,
   background,
   colour,
@@ -58,9 +60,9 @@ const NumberSelector = ({
   font,
   fontSize,
   opacity,
-  showCustomInput,
   onClick,
-  onChange
+  onChange,
+  onInputChange
 }) => {
   const [hoverId, setHoverId] = useState(selectedValue || 0)
   const [selected, setSelected] = useState(selectedValue || undefined)
@@ -118,11 +120,11 @@ const NumberSelector = ({
               fontSize: fontSize || DEFAULT_FONT_SIZE
             }}
           >
-            {el >= 0 ? el : 'Disable'}
+            {el >= 0 ? el : disabledText}
           </div>
         </div>
       ))}
-      {showCustomInput && (
+      {onInputChange && (
         <div
           style={{
             width: '96%'
@@ -140,7 +142,12 @@ const NumberSelector = ({
             }}
             type='number'
             value={customValue}
-            onChange={(e) => setCustomValue(e.target.value)}
+            onChange={(e) => {
+              const val = Math.max(+minValue, +e.target.value);
+              setCustomValue(val);
+              setSelected(val)
+              onInputChange(val);
+            }}
           />
         </div>
       )}

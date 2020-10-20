@@ -39,10 +39,10 @@ class Example extends Component {
  * hoverBackground: an element's background when hovering over it (default: undefined)
  * font: the text's font-family (default: "sans-serif")
  * fontSize: the text's font size (CSS value; default: initial)
- * showCustomInput: if true, shows custom number input field
  * opacity: the component's opacity (not the hovering opacity; CSS value, default: 1)
  * onClick: a function that is called with a single argument, the value from values, when user clicks a hovered row
  * onChange: a function that is called with the hovered over row when user hovers over a row (enters it)
+ * onInputChange: function that is called with a custom input value; if not provided, no input field will be shown
 
 ### Develop
 
