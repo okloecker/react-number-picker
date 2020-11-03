@@ -44,6 +44,14 @@ export const NumberSelectorWithCustomInputAndDisableBlack = () => (
   </div>
 )
 
+export const NumberSelectorWithUndefinedValues = () => (
+  <NumberSelector
+    onChange={action('change')}
+    onClick={action('click')}
+    values={undefined}
+  />
+)
+
 export const NumberSelectorWithDisable = () => (
   <NumberSelector
     onChange={action('change')}
